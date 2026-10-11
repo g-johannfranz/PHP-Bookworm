@@ -1,0 +1,178 @@
+/* Center everything vertically and horizontally */
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #e0ffc3;
+}
+
+/* Outer container */
+.center-container {
+  width: 600px; /* wider box */
+  padding: 30px;
+  border: 2px solid green; /* visible border around container */
+  border-radius: 20px;
+  background: white;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+/* Title centered */
+.form-title {
+  text-align: center;
+  margin-bottom: 32px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* Group label + input stacked neatly */
+.form-group {
+  display: flex;
+  flex-direction: column; /* stack label above input */
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.form-group label {
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.form-group input {
+  width: 95%; /* slightly narrower than full width */
+  margin-right: 20px; /* space on the right side */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* Error messages directly below input */
+label.error, #terms-error {
+  display: block;        /* force onto its own line */
+  margin-top: 4px;       /* small gap above error */
+  margin-bottom: 4px;   /* space below before button */
+  color: red;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Valid/invalid borders */
+input.valid {
+  border: 2px solid green;
+}
+
+input.error {
+  border: 2px solid red;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 14px;
+  background: #00d748;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #009e35;
+}
+
+/* Register section styling */
+.register-section {
+  margin-top: 20px;
+  display: flex;              /* side by side */
+  justify-content: center;    /* center horizontally */
+  align-items: center;        /* align vertically */
+  gap: 6px;                  /* spacing between text and link */
+  font-size: 14px;            /* same font size for both */
+}
+
+.register-section p {
+  margin: 0;                  /* remove default paragraph margin */
+  color: #333;
+}
+
+.register-link {
+  color: #00d748;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+/* Row container for side-by-side groups */
+.form-row {
+  display: flex;
+  justify-content: flex-start; /* align to the left */
+  margin-bottom: -20px; /* tighter spacing below row */
+}
+
+/* Each group inside the row */
+.form-row .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Explicit sizes for First/Last Name inputs */
+#firstName, #lastName {
+  width: 265px;   /* fixed width for each box */
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+/* Other inputs remain full width */
+.form-group input:not(#firstName):not(#lastName) {
+  width: 575px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+label[for="terms"] {
+  font-size: 14px;
+  font-weight: normal; /* optional: keeps it lighter than bold labels */
+  color: #333;         /* optional: consistent text color */
+}
+
+#terms {
+  margin-right: 8px;   /* space between checkbox and text */
+  margin-bottom: 20px; /* space below the checkbox row */
+}
+
+.login-section {
+  margin-top: 20px;
+  display: flex;          /* side by side */
+  justify-content: center; /* center under the button */
+  align-items: center;
+  gap: 6px;               /* space between text and link */
+  font-size: 14px; 
+}
+
+.login-section p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-link {
+  color: #00d748; /* same blue as your Register button */
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
